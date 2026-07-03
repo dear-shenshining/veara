@@ -1,3 +1,4 @@
+// 品牌站的主要文案和导航都集中在这里，后续改字尽量只动这一处。
 export const siteConfig = {
   brand: "Veara",
   image: "/images/black.jpg",

@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-[1200px] flex-col px-6 py-8 md:px-10 md:py-10">
+      {/* 顶部只保留品牌名和站内锚点，避免额外交互影响稳定性。 */}
       <header className="flex flex-col gap-6 border-b border-line pb-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.35em] text-smoke">
@@ -22,6 +23,7 @@ export default function Home() {
         </nav>
       </header>
 
+      {/* 首屏用单张主图配合品牌说明，保持页面结构尽量静态。 */}
       <section className="grid gap-8 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
         <div className="space-y-6">
           <h2 className="max-w-3xl font-serif text-4xl leading-tight text-ivory md:text-6xl">
@@ -45,6 +47,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 下面三个 section 分别承载品牌介绍、当前系列说明和补充说明。 */}
       <section
         id="about"
         className="grid gap-8 border-t border-line py-10 lg:grid-cols-[0.9fr_1.1fr]"
