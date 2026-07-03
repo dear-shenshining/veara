@@ -53,5 +53,6 @@ export const siteConfig = {
     "真正耐看的单品，不需要靠动画、滤镜或堆叠信息来证明自己。",
     "Veara 想呈现的是一种安静但完成度很高的日常状态。",
   ],
+  salesCompany: "深圳金焱焱科技有限公司",
   footerNote: "Built for a steadier, quieter wardrobe.",
 } as const;

@@ -136,6 +136,9 @@ export default function Home() {
             <p className="mt-2 text-sm leading-7 text-smoke">
               {siteConfig.footerNote}
             </p>
+            <p className="mt-2 text-sm leading-7 text-smoke">
+              销售公司：{siteConfig.salesCompany}
+            </p>
           </div>
 
           <p className="text-xs uppercase tracking-[0.28em] text-smoke">
