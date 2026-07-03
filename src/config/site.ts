@@ -1,33 +1,56 @@
-/**
- * 站点配置 — 替换图片时只需修改 heroImage 路径
- */
 export const siteConfig = {
-  brand: "VEARA",
-  tagline: "Essentials, Elevated",
-  statement: "Less noise. More presence.",
-  description: "简约街头美学，以品质面料与利落剪裁定义日常穿搭。",
-  heroImage: "/images/hero-product.jpg",
-  heroProduct: {
-    name: "Box Fit Tee",
-    subtitle: "重磅纯棉 · 落肩版型",
-    price: 299,
-    season: "SS 2026",
-    code: "V001",
-  },
+  brand: "Veara",
+  image: "/images/black.jpg",
+  imageAlt: "Veara black draped hoodie laid flat with visible label detail.",
+  description: "Veara 以安静、干净、耐穿的黑色单品，整理日常衣橱的轮廓感。",
   navLinks: [
-    { label: "系列", href: "#collection" },
-    { label: "焦点", href: "#featured" },
-    { label: "品牌", href: "#about" },
+    { label: "About", href: "#about" },
+    { label: "Edition", href: "#edition" },
+    { label: "Notes", href: "#notes" },
   ],
-  products: [
-    { id: 1, name: "Box Fit Tee", price: 299, image: "/images/hero-product.jpg", tag: "Core", span: "large" as const },
-    { id: 2, name: "Oversized Hoodie", price: 459, image: "/images/hero-product.jpg", tag: "New", span: "small" as const },
-    { id: 3, name: "Relaxed Joggers", price: 389, image: "/images/hero-product.jpg", tag: null, span: "small" as const },
-    { id: 4, name: "Essential Cap", price: 159, image: "/images/hero-product.jpg", tag: "Limited", span: "medium" as const },
+  hero: {
+    kicker: "Edition 01 / Quiet Black",
+    title: "A calm uniform for everyday hours.",
+    description:
+      "Veara 不强调喧闹的设计语言，而是把重点放回线条、垂感和触感本身。黑色足够克制，也足够完整，适合被长时间穿着。",
+    note:
+      "品牌气质来自安静的完成度，而不是密集的视觉刺激。",
+  },
+  about: {
+    title: "Veara keeps things simple on purpose.",
+    body:
+      "这个品牌更在意穿上之后的状态: 看起来整洁、不过度用力、可以自然进入通勤、出行和日常停留的每个场景。",
+    quote:
+      "Less noise, more line. Less decoration, more finish.",
+  },
+  principles: [
+    {
+      title: "Clean silhouette",
+      body: "轮廓清楚，线条不过分夸张，能稳定地适配日常搭配。",
+    },
+    {
+      title: "Soft structure",
+      body: "保持垂感和柔顺表面，让黑色看起来不压迫、不沉闷。",
+    },
+    {
+      title: "Quiet branding",
+      body: "品牌信息留在近距离，而不是抢走穿着者本身的存在感。",
+    },
   ],
-  pillars: [
-    { num: "01", title: "极简", desc: "去除多余，保留本质。" },
-    { num: "02", title: "品质", desc: "高克重面料，经久耐穿。" },
-    { num: "03", title: "日常", desc: "为每一天而设计。" },
+  edition: {
+    title: "Edition 01 focuses on one clear impression.",
+    body:
+      "一件黑色单品就足够传达 Veara 的方向: 干净、利落、不过载。没有多余动作，也不依赖复杂效果，靠材质与轮廓完成表达。",
+    details: [
+      "适合单穿，也适合叠搭外层。",
+      "视觉重点放在帽型、抽绳与整体垂坠感。",
+      "黑色作为统一底色，更容易形成稳定衣橱。",
+    ],
+  },
+  notes: [
+    "黑色不是隐藏，而是让比例和表面更清楚地被看到。",
+    "真正耐看的单品，不需要靠动画、滤镜或堆叠信息来证明自己。",
+    "Veara 想呈现的是一种安静但完成度很高的日常状态。",
   ],
+  footerNote: "Built for a steadier, quieter wardrobe.",
 } as const;

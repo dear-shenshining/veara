@@ -1,36 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0a0a0a;
-  --paper: #f4f1eb;
-  --sand: #e8e2d6;
-  --taupe: #9a8b78;
-  --muted: #7a7570;
-  --line: #d5cfc4;
+  --canvas: #101010;
+  --panel: #181818;
+  --ivory: #f1ede4;
+  --smoke: #b5aea1;
+  --line: rgba(241, 237, 228, 0.12);
+  --font-sans-stack: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-serif-stack: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
 @theme inline {
-  --color-ink: var(--ink);
-  --color-paper: var(--paper);
-  --color-sand: var(--sand);
-  --color-taupe: var(--taupe);
-  --color-muted: var(--muted);
+  --color-canvas: var(--canvas);
+  --color-panel: var(--panel);
+  --color-ivory: var(--ivory);
+  --color-smoke: var(--smoke);
   --color-line: var(--line);
-  --font-sans: var(--font-outfit);
-  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-sans-stack);
+  --font-serif: var(--font-serif-stack);
 }
 
 html {
-  scroll-behavior: smooth;
+  background: var(--canvas);
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-outfit), system-ui, sans-serif;
+  background: var(--canvas);
+  color: var(--ivory);
+  font-family: var(--font-sans-stack);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  background: var(--panel);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 ::selection {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--ivory);
+  color: var(--canvas);
 }

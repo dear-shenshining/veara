@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "dev:stop": "powershell -NoProfile -Command \"$lock='.next/dev/lock'; if (Test-Path $lock) { $p=(Get-Content $lock | ConvertFrom-Json).pid; Stop-Process -Id $p -Force -ErrorAction SilentlyContinue }; Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue\"",
-    "dev:clean": "npm run dev:stop && powershell -NoProfile -Command \"if (Test-Path .next) { Remove-Item -Recurse -Force .next }\" && npm run dev",
+    "dev:poll": "powershell -NoProfile -Command \"$env:WATCHPACK_POLLING='true'; $env:CHOKIDAR_USEPOLLING='true'; npx next dev --webpack\"",
+    "dev:stop": "powershell -NoProfile -Command \"if (Test-Path '.next/dev/lock') { try { Stop-Process -Id ((Get-Content '.next/dev/lock' -Raw | ConvertFrom-Json).pid) -Force -ErrorAction SilentlyContinue } catch {} }\"",
+    "dev:clean": "npm run dev:stop && npm run dev:clean:cache && npm run dev",
+    "dev:clean:cache": "powershell -NoProfile -Command \"if (Test-Path .next) { Remove-Item -Recurse -Force .next }\"",
     "build": "next build --webpack",
     "start": "next start",
     "preview": "npm run build && npm run start",
